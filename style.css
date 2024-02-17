@@ -29,6 +29,7 @@ main {
 
 main form * {
   margin-bottom: 10px;
+  display: flex;
 }
 
 #evaluation-form {
@@ -41,8 +42,8 @@ main form * {
   height: 500px;
 }
 
-#container-name {
-  display: inline-block;
+main form div > input {
+  margin-right: 20px;
 }
 
 button {
