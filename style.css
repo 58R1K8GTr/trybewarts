@@ -6,3 +6,18 @@ header {
 header .trybewarts-header-logo {
   height: 80px;
 }
+
+header .trybewarts-login {
+  margin-left: auto;
+  display: flex;
+}
+
+header form * {
+  height: 30px;
+  margin-top: auto;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #4e2c83;
+}
