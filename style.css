@@ -19,7 +19,7 @@ header .trybewarts-login {
   display: flex;
 }
 
-header form * {
+header form > * {
   margin-right: 10px;
 }
 
@@ -37,8 +37,12 @@ main form > * {
   display: flex;
 }
 
+#container-family {
+  margin-top: 10px;
+}
+
 #label-family {
-  margin: 10px 0px;
+  margin-bottom: 10px;
 }
 
 #evaluation-form {
