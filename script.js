@@ -1,7 +1,7 @@
 // getting elements.
 const buttonLogin = document.querySelector('#button-login');
-const inputEmail = document.querySelector('#input-email');
-const inputPassword = document.querySelector('#input-password');
+const inputEmail = document.querySelector('#input-email-login');
+const inputPassword = document.querySelector('#input-password-login');
 
 function login(event) {
   event.preventDefault();
