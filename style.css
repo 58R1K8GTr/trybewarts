@@ -14,7 +14,7 @@ header .trybewarts-login {
   display: flex;
 }
 
-header form *:nth-child(1):nth-child(n+2) {
+header form * {
   margin-right: 10px;
 }
 
@@ -24,6 +24,11 @@ header form *:nth-child(1):nth-child(n+2) {
 
 main {
   display: flex;
+  margin-top: 30px;
+}
+
+main form * {
+  margin-bottom: 10px;
 }
 
 #evaluation-form {
@@ -34,6 +39,10 @@ main {
 
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+#container-name {
+  display: inline-block;
 }
 
 button {
