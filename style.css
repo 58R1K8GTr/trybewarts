@@ -18,6 +18,11 @@ header form * {
   margin-right: 10px;
 }
 
+#trybewarts-header-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 button {
   background-color: #4e2c83;
 }
