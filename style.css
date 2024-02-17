@@ -1,3 +1,8 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
 header {
   display: flex;
   background-color: rgb(50, 167, 145);
@@ -27,9 +32,13 @@ main {
   margin-top: 30px;
 }
 
-main form * {
+main form > * {
   margin-bottom: 10px;
   display: flex;
+}
+
+#label-family {
+  margin: 10px 0px;
 }
 
 #evaluation-form {
@@ -44,6 +53,11 @@ main form * {
 
 main form div > input {
   margin-right: 20px;
+}
+
+#container-family {
+  display: flex;
+  flex-direction: column;
 }
 
 button {
