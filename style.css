@@ -8,19 +8,27 @@ header .trybewarts-header-logo {
 }
 
 header .trybewarts-login {
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;
   display: flex;
 }
 
-header form * {
-  height: 30px;
-  margin-top: auto;
+header form *:nth-child(1):nth-child(n+2) {
   margin-right: 10px;
 }
 
 #trybewarts-header-title {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+}
+
+main {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
 }
 
 button {
