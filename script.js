@@ -3,9 +3,10 @@ const buttonLogin = document.querySelector('#button-login');
 const inputEmail = document.querySelector('#input-email-login');
 const inputPassword = document.querySelector('#input-password-login');
 const containerRate = document.querySelector('#container-rate');
-const textareaDescribe = document.querySelector('#textarea-describe');
+const textareaDescribe = document.querySelector('#textarea');
 const inputAgreement = document.querySelector('#agreement');
 const buttonSubmit = document.querySelector('#submit-btn');
+const pCounter = document.querySelector('#counter');
 
 // code.
 function login(event) {
@@ -39,3 +40,11 @@ function enableButtonSubmit(event) {
 }
 
 inputAgreement.addEventListener('click', enableButtonSubmit);
+
+function counter(event) {
+  pCounter.innerText = 500 - event.target.value.length;
+}
+
+textareaDescribe.addEventListener('input', counter);
+
+pCounter.innerText = 500 - textareaDescribe.value.length
