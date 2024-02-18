@@ -1,6 +1,9 @@
 body {
   padding: 0px;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -65,6 +68,10 @@ main form > * {
   margin-right: 20px;
 }
 
+#house-label {
+  margin: auto 0px;
+}
+
 #containers-side-by-side > * {
   margin-right: 70px;
 }
@@ -109,4 +116,5 @@ footer {
   text-align: center;
   background-color: #3c404a;
   color: white;
+  margin-top: auto;
 }
