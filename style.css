@@ -14,6 +14,7 @@ header .trybewarts-header-logo {
 
 #trybewarts-header-title {
   color: white;
+  margin: auto;
 }
 
 header .trybewarts-login {
@@ -27,13 +28,10 @@ header form > * {
   margin-right: 10px;
 }
 
-#trybewarts-header-title {
-  margin: auto;
-}
-
 main {
   display: flex;
   margin-top: 30px;
+  overflow-x: auto;
 }
 
 main form > * {
@@ -93,4 +91,18 @@ textarea {
 button {
   background-color: #4e2c83;
   justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #3c404a;
+  color: white;
 }
