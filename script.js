@@ -20,13 +20,14 @@ const inputsSubjects = document.querySelectorAll('.subject');
 // code.
 function login(event) {
   event.preventDefault();
-  (inputEmail.value === 'tryber@teste.com' && inputPassword.value === '123456')
-    ? alert('Olá, Tryber!')
-    : alert('Email ou senha inválidos.');
+  if (inputEmail.value === 'tryber@teste.com' && inputPassword.value === '123456') {
+    alert('Olá, Tryber!');
+  } else {
+    alert('Email ou senha inválidos.');
+  }
 }
 
 buttonLogin.addEventListener('click', login);
-
 
 const inputsRate = [];
 for (let indexInput = 1; indexInput < 11; indexInput += 1) {
@@ -42,8 +43,8 @@ for (let indexInput = 1; indexInput < 11; indexInput += 1) {
   containerRate.appendChild(label);
 }
 
-textareaDescribe.value = 'uma hard skill: javascript em andamento.' +
-  '\numa soft skill: empatia.';
+textareaDescribe.value = 'uma hard skill: javascript em andamento.'
+  + '\numa soft skill: empatia.';
 
 function enableButtonSubmit(event) {
   if (event.target.checked) {
@@ -83,37 +84,37 @@ function getInputCheckboxCheckedvalues(elements) {
   return listChecked;
 }
 
-evaluationForm.addEventListener(
-  'submit',
-  (event) => {
-    event.preventDefault();
-    evaluationForm.style.display = 'none';
-    const formData = document.createElement('form');
-    formData.style.width = '675px';
-    formData.style.display = 'flex';
-    formData.style.flexDirection = 'column';
-    formData.id = 'form-data';
-    const pName = document.createElement('p');
-    pName.innerText = `Nome: ${inputName.value} ${inputLastname.value}`;
-    formData.appendChild(pName);
-    const pEmail = document.createElement('p');
-    pEmail.innerText = `Email: ${inputEmailform2.value}`;
-    formData.appendChild(pEmail);
-    const pHouse = document.createElement('p');
-    pHouse.innerText = `Casa: ${inputHouse.options[inputHouse.selectedIndex].value}`
-    formData.appendChild(pHouse);
-    const pFamily = document.createElement('p');
-    pFamily.innerText = `Família: ${getInputRadioCheckedValue(inputsFamily)}`;
-    formData.appendChild(pFamily);
-    const pSubjects = document.createElement('p');
-    pSubjects.innerText = `Matérias: ${getInputCheckboxCheckedvalues(inputsSubjects).join(', ')}`
-    formData.appendChild(pSubjects);
-    const pAssessment = document.createElement('p');
-    pAssessment.innerText = `Avaliação: ${getInputRadioCheckedValue(inputsRate)}`
-    formData.appendChild(pAssessment);
-    const pObservations = document.createElement('p');
-    pObservations.innerText = `Observações: ${textareaDescribe.value}`;
-    formData.appendChild(pObservations);
-    main.insertBefore(formData, imageCrest);
-  }
-);
+function createFormElement(id) {
+  const formData = document.createElement('form');
+  formData.style.width = '675px';
+  formData.style.display = 'flex';
+  formData.style.flexDirection = 'column';
+  formData.id = id;
+  return formData;
+}
+
+function createPElement(innerText) {
+  const pElement = document.createElement('p');
+  pElement.innerText = innerText;
+  return pElement;
+}
+
+function afterSubmit(event) {
+  event.preventDefault();
+  evaluationForm.style.display = 'none';
+  const formData = createFormElement('form-data');
+  formData.appendChild(createPElement(`Nome: ${inputName.value} ${inputLastname.value}`));
+  formData.appendChild(createPElement(`Email: ${inputEmailform2.value}`));
+  formData.appendChild(
+    createPElement(`Casa: ${inputHouse.options[inputHouse.selectedIndex].value}`),
+  );
+  formData.appendChild(createPElement(`Família: ${getInputRadioCheckedValue(inputsFamily)}`));
+  formData.appendChild(
+    createPElement(`Matérias: ${getInputCheckboxCheckedvalues(inputsSubjects).join(', ')}`),
+  );
+  formData.appendChild(createPElement(`Avaliação: ${getInputRadioCheckedValue(inputsRate)}`));
+  formData.appendChild(createPElement(`Observações: ${textareaDescribe.value}`));
+  main.insertBefore(formData, imageCrest);
+}
+
+evaluationForm.addEventListener('submit', afterSubmit);

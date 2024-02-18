@@ -1,6 +1,6 @@
 body {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -46,11 +46,11 @@ main form > * {
   display: flex;
 }
 
-#container-family, #container-most-want-to-learn {
+#container-family , #container-most-want-to-learn {
   margin-top: 10px;
 }
 
-#label-family, #label-content {
+#label-family , #label-content {
   margin-bottom: 10px;
 }
 
@@ -64,12 +64,14 @@ main form > * {
   height: 500px;
 }
 
-#container-name > input, #email-house-container > input {
+#container-name > input , #email-house-container > input {
   margin-right: 20px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 #house-label {
-  margin: auto 0px;
+  margin: auto 0;
 }
 
 #containers-side-by-side > * {
@@ -100,21 +102,16 @@ textarea {
 }
 
 button {
-  background-color: #4e2c83;
+  background-color: rgb(78, 44, 131);
   justify-content: center;
   padding: 10px;
   border-radius: 5px;
 }
 
-input {
-  border-radius: 5px;
-  padding: 10px;
-}
-
 footer {
   padding: 10px;
   text-align: center;
-  background-color: #3c404a;
+  background-color: rgb(60, 64, 74);
   color: white;
   margin-top: auto;
 }
