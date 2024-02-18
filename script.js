@@ -3,6 +3,9 @@ const buttonLogin = document.querySelector('#button-login');
 const inputEmail = document.querySelector('#input-email-login');
 const inputPassword = document.querySelector('#input-password-login');
 const containerRate = document.querySelector('#container-rate');
+const textareaDescribe = document.querySelector('#textarea-describe');
+const inputAgreement = document.querySelector('#agreement');
+const buttonSubmit = document.querySelector('#submit-btn');
 
 // code.
 function login(event) {
@@ -24,3 +27,15 @@ for (let indexInput = 1; indexInput < 11; indexInput += 1) {
   label.appendChild(inputCheckbox);
   containerRate.appendChild(label);
 }
+
+textareaDescribe.value = 'uma hard skill: javascript em andamento.\numa soft skill: empatia.'
+
+function enableButtonSubmit(event) {
+  if (event.target.checked) {
+    buttonSubmit.disabled = false;
+  } else {
+    buttonSubmit.disabled = true;
+  }
+}
+
+inputAgreement.addEventListener('click', enableButtonSubmit);
