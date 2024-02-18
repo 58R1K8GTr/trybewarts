@@ -4,6 +4,10 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   background-color: rgb(50, 167, 145);
 }
@@ -30,7 +34,7 @@ header form > * {
 
 main {
   display: flex;
-  margin-top: 30px;
+  margin-top: 100px;
   overflow-x: auto;
 }
 
