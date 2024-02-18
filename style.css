@@ -12,6 +12,10 @@ header .trybewarts-header-logo {
   height: 80px;
 }
 
+#trybewarts-header-title {
+  color: white;
+}
+
 header .trybewarts-login {
   margin-top: auto;
   margin-bottom: auto;
@@ -37,11 +41,11 @@ main form > * {
   display: flex;
 }
 
-#container-family {
+#container-family, #container-most-want-to-learn {
   margin-top: 10px;
 }
 
-#label-family {
+#label-family, #label-content {
   margin-bottom: 10px;
 }
 
@@ -55,13 +59,26 @@ main form > * {
   height: 500px;
 }
 
-main form div > input {
+#container-name > input, #email-house-container > input {
   margin-right: 20px;
+}
+
+#containers-side-by-side > * {
+  margin-right: 70px;
 }
 
 #container-family {
   display: flex;
   flex-direction: column;
+}
+
+#container-most-want-to-learn {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-rate {
+  margin-right: 20px;
 }
 
 button {
