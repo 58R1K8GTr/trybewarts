@@ -13,6 +13,7 @@ header {
   right: 0;
   display: flex;
   background-color: rgb(50, 167, 145);
+  justify-content: space-between;
 }
 
 header .trybewarts-header-logo {
@@ -21,13 +22,11 @@ header .trybewarts-header-logo {
 
 #trybewarts-header-title {
   color: white;
-  margin: auto;
 }
 
 header .trybewarts-login {
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: auto;
   display: flex;
 }
 
@@ -71,7 +70,8 @@ main form > * {
 }
 
 #house-label {
-  margin: auto 0;
+  align-content: center;
+  margin-right: 20px;
 }
 
 #containers-side-by-side > * {
@@ -113,5 +113,4 @@ footer {
   text-align: center;
   background-color: rgb(60, 64, 74);
   color: white;
-  margin-top: auto;
 }
